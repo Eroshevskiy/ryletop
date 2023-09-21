@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ryleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="merch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="descreption" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="detailproiz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cost" Type="Int32" Nullable="false" />
+    <Property Name="discount" Type="Int32" />
+    <NavigationProperty Name="sostav" Relationship="Self.FK_sostav_merch" FromRole="merch" ToRole="sostav" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id_status" Type="Int32" Nullable="false" />
+    <Property Name="id_users" Type="Int32" Nullable="false" />
+    <Property Name="id_point" Type="Int32" Nullable="false" />
+    <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="kod" Type="Int32" Nullable="false" />
+    <Property Name="cost" Type="Int32" Nullable="false" />
+    <Property Name="discount" Type="Int32" />
+    <NavigationProperty Name="sostav" Relationship="Self.FK_sostav_orders" FromRole="orders" ToRole="sostav" />
+  </EntityType>
+  <EntityType Name="point">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sostav">
+    <Key>
+      <PropertyRef Name="id_orders" />
+      <PropertyRef Name="id_merch" />
+    </Key>
+    <Property Name="id_orders" Type="Int32" Nullable="false" />
+    <Property Name="id_merch" Type="Int32" Nullable="false" />
+    <Property Name="count" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="merch" Relationship="Self.FK_sostav_merch" FromRole="sostav" ToRole="merch" />
+    <NavigationProperty Name="orders" Relationship="Self.FK_sostav_orders" FromRole="sostav" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="type_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="users" Relationship="Self.FK_users_type_users" FromRole="type_users" ToRole="users" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pasword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_type" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="type_users" Relationship="Self.FK_users_type_users" FromRole="users" ToRole="type_users" />
+  </EntityType>
+  <Association Name="FK_sostav_merch">
+    <End Role="merch" Type="Self.merch" Multiplicity="1" />
+    <End Role="sostav" Type="Self.sostav" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="merch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sostav">
+        <PropertyRef Name="id_merch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sostav_orders">
+    <End Role="orders" Type="Self.orders" Multiplicity="1" />
+    <End Role="sostav" Type="Self.sostav" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sostav">
+        <PropertyRef Name="id_orders" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_type_users">
+    <End Role="type_users" Type="Self.type_users" Multiplicity="1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type_users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="id_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ryleEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="merch" EntityType="Self.merch" />
+    <EntitySet Name="orders" EntityType="Self.orders" />
+    <EntitySet Name="point" EntityType="Self.point" />
+    <EntitySet Name="sostav" EntityType="Self.sostav" />
+    <EntitySet Name="status" EntityType="Self.status" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="type_users" EntityType="Self.type_users" />
+    <EntitySet Name="users" EntityType="Self.users" />
+    <AssociationSet Name="FK_sostav_merch" Association="Self.FK_sostav_merch">
+      <End Role="merch" EntitySet="merch" />
+      <End Role="sostav" EntitySet="sostav" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sostav_orders" Association="Self.FK_sostav_orders">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="sostav" EntitySet="sostav" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_type_users" Association="Self.FK_users_type_users">
+      <End Role="type_users" EntitySet="type_users" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
