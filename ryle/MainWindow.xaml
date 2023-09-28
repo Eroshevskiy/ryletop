@@ -7,19 +7,34 @@
         mc:Ignorable="d"
         Title="ООО-РУЛЬ" MinHeight="450" MinWidth="800">
     <Grid>
-        <Grid.RowDefinitions>
+        <Grid.RowDefinitions> 
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Border Background="Aqua">
-            <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="24" Margin="700,62,0,0" VerticalAlignment="Top" Width="0"/>
+            
         </Border>
         <TextBlock Text="ООО-бАРАНКА" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></TextBlock>
         <Image Source="/Res/logo.png" HorizontalAlignment="Left" />
         <Button  Content="Авторизация" HorizontalAlignment="Right" Margin="663,27,0,0" VerticalAlignment="Top" Width="75" Height="47" Click="OpenAutor"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold"> Регистрация</TextBlock>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18">Введите логин</TextBlock>
+            <TextBox x:Name="login" VerticalAlignment="Center" HorizontalAlignment="Center" Width="162" Height="25"></TextBox >
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18">Введите пароль</TextBlock>
+            <PasswordBox x:Name="password" VerticalAlignment="Center" HorizontalAlignment="Center" Width="162" Height="25"></PasswordBox >
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18">Повторите пароль</TextBlock>
+            <PasswordBox x:Name="proof" VerticalAlignment="Center" HorizontalAlignment="Center" Width="162" Height="25"></PasswordBox >
+            <Button Background="Aqua" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Margin="0,30,0,0" Height="35" FontWeight="Bold" Click="regClick">Зарегистрироваться</Button>
+
+        </StackPanel>
+        
+
+        
 
 
 
 
     </Grid>
+    
 </Window>

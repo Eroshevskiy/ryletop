@@ -23,5 +23,12 @@ namespace ryle.Pages
         {
             InitializeComponent();
         }
+
+        private void autorClick(object sender, RoutedEventArgs e)
+        {
+            Autor autor = new Autor();
+            this.Visibility = Visibility.Hidden;
+            autor.Show();
+        }
     }
 }

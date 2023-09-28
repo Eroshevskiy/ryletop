@@ -33,14 +33,40 @@ namespace ryle.Pages
             var userobj = Classes.dbconnect.modeldb.users.FirstOrDefault(x =>
             login.Text == x.login && pass.Password == x.pasword);
 
-            
+           if(userobj.id_type == 1)
+            {
+                Admin admin = new Admin();
+                this.Visibility = Visibility.Hidden;
+                admin.Show();
+            }
 
-            Admin objAdmin = new Admin();
-            this.Visibility = Visibility.Hidden;
-            objAdmin.Show();
-            
+            if (userobj.id_type == 2)
+            {
+                Manager manager = new Manager();
+                this.Visibility = Visibility.Hidden;
+                manager.Show();
 
-            
+            }
+
+            if (userobj.id_type == 3)
+            {
+                Users users = new Users();
+                this.Visibility = Visibility.Hidden;
+                users.Show();
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

@@ -29,6 +29,9 @@ namespace ryle.Models
         public int cost { get; set; }
         public Nullable<int> discount { get; set; }
     
+        public virtual point point { get; set; }
+        public virtual status status { get; set; }
+        public virtual users users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<sostav> sostav { get; set; }
     }

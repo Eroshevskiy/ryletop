@@ -8,5 +8,8 @@
         Title="Admin" Height="450" Width="800">
     <Grid>
         <TextBlock FontSize="20">admin</TextBlock>
+        <StackPanel>
+            <Button FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFEC8E07" FontWeight="Bold" Click="autorClick">назад</Button>
+        </StackPanel>
     </Grid>
 </Window>
