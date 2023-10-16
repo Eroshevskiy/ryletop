@@ -1,0 +1,71 @@
+﻿<Window x:Class="ryle.Pages.merches"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ryle.Pages"
+        mc:Ignorable="d"
+        Title="merches" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Right" Background="Aqua" FontWeight="Bold" Grid.Row="1" Click="vihodClick" >Выйти</Button>
+
+        <DataGrid Name="lv" AutoGenerateColumns="False" GridLinesVisibility="None">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding TextColor}" Value="True">
+                            <Setter Property="Background" Value="silver"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Image Width="150">
+                                    <Image.Source>
+                                        <Binding Path="photo">
+                                            <Binding.TargetNullValue>
+                                                <ImageSource>/photo/t4.jpg</ImageSource>
+                                            </Binding.TargetNullValue>
+                                        </Binding>
+                                    </Image.Source>
+                                </Image>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="{Binding title}" FontSize="30" Foreground ="Aqua" ></TextBlock>
+                                <TextBlock Text="{Binding descreption}"  FontSize="15" Foreground ="DarkBlue" ></TextBlock>
+                                <TextBlock Text="{Binding detailproiz}" FontSize="15" Foreground ="DarkBlue" ></TextBlock>
+                                <TextBlock Text="{Binding cost}" TextDecorations="{Binding Arrow}"></TextBlock>
+                                <TextBlock Text="{Binding newcost}" ></TextBlock>
+                            </StackPanel>
+                            
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" Text="{Binding discount, StringFormat={}скидка: {0:0.##}%}" ></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+    </Grid>
+</Window>

@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="Manager" Height="450" Width="800">
     <Grid>
-        <TextBlock FontSize="20">manager</TextBlock>
+        <TextBlock FontSize="20" FontWeight="Bold">Manager</TextBlock>
         <StackPanel>
-            <Button FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FFEC8E07" FontWeight="Bold" Click="autorClick">назад</Button>
+            <Button FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Right" Background="Aqua" FontWeight="Bold" Click="autorClick">Назад</Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2">
+            <Button  FontSize="22" FontWeight="Bold" Background="Aqua" Click="listmerchesClick" >Список заказов</Button>
         </StackPanel>
         
     </Grid>

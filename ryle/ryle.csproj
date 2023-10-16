@@ -86,7 +86,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\listviewmerch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\merches.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\tovari.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,8 +153,17 @@
     <Compile Include="Pages\Autor.xaml.cs">
       <DependentUpon>Autor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\listviewmerch.xaml.cs">
+      <DependentUpon>listviewmerch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Manager.xaml.cs">
       <DependentUpon>Manager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\merches.xaml.cs">
+      <DependentUpon>merches.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\tovari.xaml.cs">
+      <DependentUpon>tovari.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Users.xaml.cs">
       <DependentUpon>Users.xaml</DependentUpon>
@@ -197,6 +218,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="photo\t1.jpg" />
+    <Resource Include="photo\t2.jpg" />
+    <Resource Include="photo\t3.jpg" />
+    <Resource Include="photo\t4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

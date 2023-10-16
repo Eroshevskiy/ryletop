@@ -42,7 +42,7 @@ namespace ryle.Pages
 
             if (userobj.id_type == 2)
             {
-                Manager manager = new Manager();
+                listviewmerch manager = new listviewmerch();
                 this.Visibility = Visibility.Hidden;
                 manager.Show();
 
@@ -67,6 +67,13 @@ namespace ryle.Pages
 
 
 
+        }
+
+        private void mainClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            this.Visibility = Visibility.Hidden;
+            main.Show();
         }
     }
 }

@@ -10,6 +10,7 @@
     <Property Name="detailproiz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="cost" Type="Int32" Nullable="false" />
     <Property Name="discount" Type="Int32" />
+    <Property Name="photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="sostav" Relationship="Self.FK_sostav_merch" FromRole="merch" ToRole="sostav" />
   </EntityType>
   <EntityType Name="orders">

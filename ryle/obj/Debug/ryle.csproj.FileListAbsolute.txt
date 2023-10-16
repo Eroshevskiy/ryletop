@@ -21,7 +21,6 @@ C:\Users\Администратор\source\repos\ryle\ryle\obj\Debug\ryle.csproj
 C:\Users\Администратор\source\repos\ryle\ryle\obj\Debug\ryle.csproj.CoreCompileInputs.cache
 C:\Users\Администратор\source\repos\ryle\ryle\obj\Debug\ryle.exe
 C:\Users\Администратор\source\repos\ryle\ryle\obj\Debug\ryle.pdb
-C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\ryle.csproj.AssemblyReference.cache
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\MainWindow.g.cs
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\Admin.g.cs
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\Autor.g.cs
@@ -51,3 +50,9 @@ C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\ryle.Propert
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\ryle.csproj.GenerateResource.cache
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\ryle.csproj.CoreCompileInputs.cache
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\ryle.csproj.CopyComplete
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\merches.g.cs
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\merches.baml
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\listviewmerch.g.cs
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\listviewmerch.baml
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\tovari.g.cs
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\tovari.baml

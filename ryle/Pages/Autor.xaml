@@ -7,12 +7,14 @@
         mc:Ignorable="d"
         Title="Autor" Height="450" Width="800">
     <Grid>
+        <Button FontSize="15 " FontWeight="Bold" Background="Aqua" VerticalAlignment="Top" HorizontalAlignment="Right" Click="mainClick">Назад</Button>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock>Логин</TextBlock>
             <TextBox x:Name="login"></TextBox>
             <TextBlock>Пароль</TextBlock>
             <PasswordBox x:Name="pass"></PasswordBox>
             <Button Click= "Enter">Войти</Button>
+           
         </StackPanel>
     </Grid>
 </Window>

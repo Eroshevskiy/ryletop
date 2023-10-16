@@ -15,6 +15,7 @@
           <Property Name="detailproiz" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="cost" Type="int" Nullable="false" />
           <Property Name="discount" Type="int" />
+          <Property Name="photo" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="orders">
           <Key>
@@ -199,6 +200,7 @@
           <Property Name="detailproiz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="cost" Type="Int32" Nullable="false" />
           <Property Name="discount" Type="Int32" />
+          <Property Name="photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="sostav" Relationship="Self.FK_sostav_merch" FromRole="merch" ToRole="sostav" />
         </EntityType>
         <EntityType Name="orders">
@@ -395,6 +397,7 @@
                 <ScalarProperty Name="detailproiz" ColumnName="detailproiz" />
                 <ScalarProperty Name="cost" ColumnName="cost" />
                 <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

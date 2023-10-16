@@ -114,5 +114,12 @@ namespace ryle
             this.Visibility = Visibility.Hidden;
             autor.Show();
         }
+
+        private void tovariClick(object sender, RoutedEventArgs e)
+        {
+            tovari tovar = new tovari();
+            this.Visibility = Visibility.Hidden;
+            tovar.Show();
+        }
     }
 }

@@ -30,5 +30,13 @@ namespace ryle.Pages
             this.Visibility = Visibility.Hidden;
             autor.Show();
         }
+
+        private void listmerchesClick(object sender, RoutedEventArgs e)
+        {
+            listviewmerch list = new listviewmerch();
+            this.Visibility = Visibility.Hidden;
+            list.Show();
+
+        }
     }
 }

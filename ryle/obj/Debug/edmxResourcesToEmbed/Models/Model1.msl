@@ -10,6 +10,7 @@
           <ScalarProperty Name="detailproiz" ColumnName="detailproiz" />
           <ScalarProperty Name="cost" ColumnName="cost" />
           <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
