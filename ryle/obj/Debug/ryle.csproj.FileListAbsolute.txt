@@ -56,3 +56,5 @@ C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\listvi
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\listviewmerch.baml
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\tovari.g.cs
 C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\Pages\tovari.baml
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\ryle.csproj.AssemblyReference.cache
+C:\Users\erosh\OneDrive\Рабочий стол\ryle\ryle\obj\Debug\App.baml

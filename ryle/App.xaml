@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:ryle"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="{x:Type Button}">
+            <!-- Цвет текста кнопки -->
+            <Setter Property="Background" Value="silver" />
+             
+            <!-- Новый шрифт -->
+            <Setter Property="FontFamily" Value="Comic Sans MS" />
+            <Setter Property="Width" Value="auto" />
+            <Setter Property="Height" Value="auto" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
     </Application.Resources>
 </Application>

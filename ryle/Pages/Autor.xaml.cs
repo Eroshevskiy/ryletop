@@ -25,7 +25,11 @@ namespace ryle.Pages
 
             Classes.dbconnect.modeldb = new Models.ryleEntities1();
         }
-
+        /// <summary>
+        /// Это метод для кнопки
+        /// </summary>
+        /// <param name="sender">кнопка</param>
+        /// <returns>Будет выполнение перехода, изходя из базы</returns>
         private void Enter(object sender, RoutedEventArgs e)
         {
 
@@ -55,6 +59,8 @@ namespace ryle.Pages
                 users.Show();
 
             }
+
+           
 
 
 
