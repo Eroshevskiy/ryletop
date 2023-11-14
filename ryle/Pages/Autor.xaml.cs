@@ -37,41 +37,52 @@ namespace ryle.Pages
             var userobj = Classes.dbconnect.modeldb.users.FirstOrDefault(x =>
             login.Text == x.login && pass.Password == x.pasword);
 
-           if(userobj.id_type == 1)
-            {
-                Admin admin = new Admin();
-                this.Visibility = Visibility.Hidden;
-                admin.Show();
-            }
-
-            if (userobj.id_type == 2)
-            {
-                listviewmerch manager = new listviewmerch();
-                this.Visibility = Visibility.Hidden;
-                manager.Show();
-
-            }
-
-            if (userobj.id_type == 3)
-            {
-                Users users = new Users();
-                this.Visibility = Visibility.Hidden;
-                users.Show();
-
-            }
-
            
 
 
 
 
 
+            try
+            {
+                if (userobj == null)
+                {
+                    MessageBox.Show("Такого пользователя нет!", "Ошибка при авторизации",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    if (userobj.id_type == 1)
+                    {
+                        Admin admin = new Admin();
+                        this.Visibility = Visibility.Hidden;
+                        admin.Show();
+                    }
 
+                    if (userobj.id_type == 2)
+                    {
+                        listviewmerch manager = new listviewmerch();
+                        this.Visibility = Visibility.Hidden;
+                        manager.Show();
 
+                    }
 
+                    if (userobj.id_type == 3)
+                    {
+                        Users users = new Users();
+                        this.Visibility = Visibility.Hidden;
+                        users.Show();
 
+                    }
+                }
+                
 
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка входа: {ex.Message}", "Ошибка входа",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
         }
 
